@@ -1,0 +1,31 @@
+{
+  "name": "auto-service-mecanica",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Auto Service Mecânica — Front-end com cadastro, login e gestão de dados",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:host": "vite --host",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:backend\"",
+    "build": "tsc -b && vite build",
+    "build:all": "npm run build && npm run build --prefix backend",
+    "preview": "vite preview --host",
+    "preview:open": "vite preview --host --open"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "concurrently": "^9.1.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
