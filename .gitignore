@@ -1,5 +1,7 @@
 node_modules/
 dist/
+tsconfig.tsbuildinfo
+.git-staging/
 backend/dist/
 backend/data/
 backend/.env
