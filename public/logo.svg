@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" rx="24" fill="url(#logoGrad)"/>
+  <path d="M40 120C40 108 48 96 62 90L74 84C80 81 86 81 92 84L104 90C118 96 126 108 126 120V132H40V120Z" fill="#0A1628" opacity="0.9"/>
+  <circle cx="56" cy="132" r="14" fill="#0A1628" stroke="#FF6B00" stroke-width="4"/>
+  <circle cx="110" cy="132" r="14" fill="#0A1628" stroke="#FF6B00" stroke-width="4"/>
+  <path d="M68 90L80 56H98L110 90" stroke="#FF6B00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M138 68L154 52M154 68L138 52" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="146" cy="60" r="22" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.6"/>
+  <text x="100" y="178" text-anchor="middle" fill="#FFFFFF" font-family="Rajdhani, sans-serif" font-size="14" font-weight="700" letter-spacing="2">AUTO SERVICE</text>
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="200" y2="200">
+      <stop stop-color="#FF6B00"/>
+      <stop offset="1" stop-color="#CC5500"/>
+    </linearGradient>
+  </defs>
+</svg>
