@@ -1,0 +1,149 @@
+/**
+ * Auto Service Mecânica — Design Tokens
+ * Paleta automotiva: azul profundo + laranja energia + prata metálico
+ */
+
+:root {
+  /* === CORES PRIMÁRIAS === */
+  --color-primary-900: #050d18;
+  --color-primary-800: #0a1628;
+  --color-primary-700: #0f2340;
+  --color-primary-600: #153058;
+  --color-primary-500: #1c3d70;
+
+  /* === CORES DE DESTAQUE (Accent) === */
+  --color-accent-600: #cc5500;
+  --color-accent-500: #ff6b00;
+  --color-accent-400: #ff8533;
+  --color-accent-300: #ffa366;
+  --color-accent-glow: rgba(255, 107, 0, 0.35);
+
+  /* === CORES NEUTRAS / METÁLICAS === */
+  --color-neutral-950: #0d0f12;
+  --color-neutral-900: #151820;
+  --color-neutral-800: #1e2229;
+  --color-neutral-700: #2a3038;
+  --color-neutral-600: #3d4450;
+  --color-neutral-500: #5c6370;
+  --color-neutral-400: #8b929e;
+  --color-neutral-300: #b0b6c0;
+  --color-neutral-200: #d1d5dc;
+  --color-neutral-100: #e8eaed;
+  --color-neutral-50: #f4f5f7;
+  --color-white: #ffffff;
+
+  /* === CORES SEMÂNTICAS === */
+  --color-success: #22c55e;
+  --color-success-bg: rgba(34, 197, 94, 0.12);
+  --color-warning: #f59e0b;
+  --color-warning-bg: rgba(245, 158, 11, 0.12);
+  --color-error: #ef4444;
+  --color-error-bg: rgba(239, 68, 68, 0.12);
+  --color-info: #3b82f6;
+  --color-info-bg: rgba(59, 130, 246, 0.12);
+
+  /* === GRADIENTES === */
+  --gradient-hero: linear-gradient(
+    135deg,
+    var(--color-primary-900) 0%,
+    var(--color-primary-700) 45%,
+    var(--color-primary-600) 100%
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--color-accent-600) 0%,
+    var(--color-accent-400) 100%
+  );
+  --gradient-card: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  --gradient-overlay: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(5, 13, 24, 0.85) 100%
+  );
+  --gradient-border: linear-gradient(
+    135deg,
+    rgba(255, 107, 0, 0.5) 0%,
+    rgba(28, 61, 112, 0.5) 100%
+  );
+
+  /* === TIPOGRAFIA — FAMÍLIAS === */
+  --font-display: 'Rajdhani', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Consolas', 'Courier New', monospace;
+
+  /* === TIPOGRAFIA — TAMANHOS === */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* === TIPOGRAFIA — PESOS === */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* === TIPOGRAFIA — ALTURA DE LINHA === */
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* === TIPOGRAFIA — ESPAÇAMENTO DE LETRAS === */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.08em;
+  --tracking-widest: 0.12em;
+
+  /* === ESPAÇAMENTOS === */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* === BORDAS E SOMBRAS === */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 24px var(--color-accent-glow);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.35);
+
+  /* === TRANSIÇÕES === */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* === LAYOUT === */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1200px;
+  --header-height: 72px;
+}

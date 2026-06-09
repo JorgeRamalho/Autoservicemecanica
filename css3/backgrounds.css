@@ -1,0 +1,383 @@
+/**
+ * Fundos com imagens de marcas automotivas
+ * Overlays garantem legibilidade sobre fotos de alta resolução
+ */
+
+/* === HERO SLIDESHOW === */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg__slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1.4s ease, transform 8s ease;
+}
+
+.hero-bg__slide--active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-bg__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg, rgba(5, 13, 24, 0.94) 0%, rgba(5, 13, 24, 0.78) 42%, rgba(5, 13, 24, 0.55) 100%),
+    linear-gradient(180deg, rgba(5, 13, 24, 0.35) 0%, rgba(5, 13, 24, 0.88) 100%);
+  pointer-events: none;
+}
+
+.hero-bg__glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 55%, var(--color-accent-glow) 0%, transparent 45%),
+    radial-gradient(circle at 82% 18%, rgba(28, 61, 112, 0.45) 0%, transparent 38%);
+  pointer-events: none;
+}
+
+.hero-bg__brand-tag {
+  position: absolute;
+  right: var(--space-8);
+  bottom: var(--space-8);
+  z-index: 2;
+  text-align: right;
+  animation: fadeInUp 0.6s ease;
+}
+
+.hero-bg__brand-name {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+}
+
+.hero-bg__brand-tagline {
+  font-size: var(--text-sm);
+  color: var(--color-accent-300);
+  margin-top: var(--space-1);
+}
+
+/* === HERO VISUAL — CARD COM FOTO DA MARCA === */
+.hero__brand-card {
+  position: relative;
+  width: min(100%, 420px);
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 2px solid rgba(255, 107, 0, 0.35);
+  box-shadow: var(--shadow-glow), var(--shadow-lg);
+}
+
+.hero__brand-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.hero__brand-card:hover .hero__brand-card-image {
+  transform: scale(1.05);
+}
+
+.hero__brand-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(5, 13, 24, 0.92) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-5);
+}
+
+.hero__brand-card-label {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.hero__brand-card-sublabel {
+  font-size: var(--text-sm);
+  color: var(--color-accent-300);
+  margin-top: var(--space-1);
+}
+
+.hero__brand-dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.hero__brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-neutral-600);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.hero__brand-dot--active {
+  width: 24px;
+  background: var(--color-accent-500);
+}
+
+/* === SHOWCASE DE MARCAS === */
+.section-brands {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-brands::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--brand-section-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.section-brands > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+.brand-tile {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: default;
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.brand-tile__image {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primary-700);
+  overflow: hidden;
+}
+
+.brand-tile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.brand-tile:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 107, 0, 0.45);
+  box-shadow: var(--shadow-glow);
+}
+
+.brand-tile:hover .brand-tile__image img {
+  transform: scale(1.08);
+}
+
+.brand-tile__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 25%, rgba(5, 13, 24, 0.92) 100%);
+}
+
+.brand-tile__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--space-4);
+  z-index: 1;
+}
+
+.brand-tile__name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.brand-tile__tagline {
+  font-size: var(--text-xs);
+  color: var(--color-neutral-400);
+  margin-top: var(--space-1);
+}
+
+/* === BANNER DE PÁGINA INTERNA === */
+.page-banner {
+  position: relative;
+  padding-block: var(--space-16);
+  overflow: hidden;
+  background: var(--color-primary-800);
+}
+
+.page-banner__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--page-banner-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  transform: scale(1.02);
+}
+
+.page-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 13, 24, 0.95) 0%, rgba(5, 13, 24, 0.75) 55%, rgba(5, 13, 24, 0.85) 100%),
+    linear-gradient(180deg, transparent 0%, rgba(5, 13, 24, 0.6) 100%);
+}
+
+.page-banner > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* === FORMULÁRIOS COM FUNDO DE MARCA === */
+.form-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.form-page__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--form-bg-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.28;
+  transform: scale(1.04);
+  filter: saturate(1.15);
+}
+
+.form-page__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(5, 13, 24, 0.94) 0%, rgba(10, 22, 40, 0.88) 50%, rgba(5, 13, 24, 0.92) 100%),
+    radial-gradient(circle at 70% 30%, var(--color-accent-glow) 0%, transparent 50%);
+}
+
+.form-page > .form-card,
+.form-page > .form-card--wide,
+.form-page > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* === CTA COM FUNDO === */
+.section-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-cta__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--cta-bg-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.22;
+}
+
+.section-cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 13, 24, 0.82);
+}
+
+.section-cta > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* === CARDS DE SERVIÇO COM MINI FUNDO === */
+.card--brand-bg {
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--space-8);
+}
+
+.card--brand-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-brand-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.14;
+  transition: opacity var(--transition-base), transform 0.6s ease;
+}
+
+.card--brand-bg:hover::before {
+  opacity: 0.22;
+  transform: scale(1.05);
+}
+
+.card--brand-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .brand-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-bg__brand-tag {
+    display: none;
+  }
+
+  .hero__brand-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg__slide {
+    transition: opacity 0.01ms;
+    transform: none;
+  }
+
+  .brand-tile:hover,
+  .hero__brand-card:hover .hero__brand-card-image {
+    transform: none;
+  }
+}
