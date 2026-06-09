@@ -1,4 +1,4 @@
-﻿import type { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 import { CAR_BRANDS } from '@/data/brandBackgrounds';
 
 export function BrandShowcase() {
@@ -16,8 +16,8 @@ export function BrandShowcase() {
           <p className="text-overline">Grandes Marcas</p>
           <h2 className="page-header__title">Atendemos Todas as Montadoras</h2>
           <p className="page-header__subtitle" style={{ marginInline: 'auto' }}>
-            Da linha premium Ã  popular â€” nossa equipe Ã© especializada em veÃ­culos nacionais e
-            importados com peÃ§as de qualidade e diagnÃ³stico preciso.
+            Da linha premium à popular — nossa equipe é especializada em veículos nacionais e
+            importados com peças de qualidade e diagnóstico preciso.
           </p>
         </div>
 
@@ -27,7 +27,7 @@ export function BrandShowcase() {
               <div className="brand-tile__image">
                 <img
                   src={brand.imageThumb}
-                  alt={`${brand.name} â€” veículo esportivo de luxo`}
+                  alt={`${brand.name} — modelo automotivo`}
                   loading="lazy"
                   decoding="async"
                 />
